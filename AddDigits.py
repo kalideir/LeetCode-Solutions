@@ -14,6 +14,11 @@ class Solution:
         
 
 class Solution: # constant time algorithm follows from the fact that a number is a divisble by 9 if the sum of its digits eqs 9
+    """
+    so, basically to find the digital root for a number of k digits, we calcaulte n mod 9 and we check the result which can
+    be one of three cases: 0: if the number is 0, 9: if the number if a multiplation of 9, e.g., 81, 45, 621, etc, 
+    n mod 9: if the number is not in these sets
+    """
     def addDigits(self, num: int) -> int:
         if num == 0:
             return 0
