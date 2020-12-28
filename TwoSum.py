@@ -8,7 +8,7 @@ class Solution:
             hashTable[nums[i]] = i
 
             
-class Solution:
+class Solution: # without sorting the array it won't work, sorting is nlogn 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         i = 0
         j = len(nums) - 1
