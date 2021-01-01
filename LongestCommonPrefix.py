@@ -21,3 +21,25 @@ class Solution:
         return prefix
                 
         
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        x=""
+    
+        if len(strs)==0:
+            return x
+
+        strs.sort()
+        j=len(strs[0])
+        k=0
+
+        while k<j:
+            pre=strs[0][k]
+            if all(y[k]==pre for y in strs): # never thought such python function existed :D
+                x+=pre
+                k+=1            
+            else:
+                break
+
+        return x
+                
+        
